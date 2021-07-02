@@ -1,0 +1,27 @@
+/*
+### Cobalt2 ###
+> Notes
+> Inspired by [Wes Bos' Cobalt2 theme](https://github.com/wesbos/vscode-theme-cobalt2).
+> v1.0.0
+*/
+
+// Optional vanilla roam variable import
+// @import '../../core/variables-vanilla-roam';
+
+@import 'variables';
+
+@import '../../core/index';
+
+/* components */
+// @import 'components/block-reference';
+@import 'components/top-bar';
+
+/* layout */
+@import 'layout/typography';
+@import 'layout/breadcrumb';
+
+/* pages */
+@import 'pages/all-pages';
+
+/* features */
+// @import '../../features/editor/rainbow-indents/index';

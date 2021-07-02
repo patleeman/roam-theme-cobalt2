@@ -1,0 +1,255 @@
+:root {
+  /* Roam default variables */
+
+  --primary-color: #ff9d00;
+  --s1: 8px;
+  --background-color: #193549;
+  --background-highlight: #234E6D;
+  --background-highlight-alt: #1F4662;
+
+  /* Components */
+
+  --alias__background-color: #193549; /* Legacy alias */
+  --alias__color: rgb(245, 86, 86);
+
+  --attr__color: var(--main-font__color);
+  --attr__font-weight: bold;
+
+  --block-ref__background-color: none;
+  --block-ref__background-color_hover: var(--background-highlight);
+  --block-ref__border-bottom: var(--background-highlight-alt);
+  --block-ref__color_hover: inherit;
+  --block-ref__font-size: 1em;
+  --block-ref__background-color_inline: var(--background-highlight-alt);
+  --block-ref__border-left_inline: var(--primary-color);
+
+  --block-embed__background-color: inherit;
+  --block-embed__background-color_margin-action: #738694;
+  --block-embed__border-left_margin-action: #1F4662;
+
+  --blockquote__background-color: inherit;
+  --blockquote__border_color: #30404d;
+  --blockquote__border-left: 5px solid;
+  --blockquote__color: inherit;
+  --blockquote__font-size: 14px;
+  --blockquote__text-align: inherit;
+  --blockquote__text-justify: inherit;
+
+  --code-font__color: #fff;
+  --code-font__font-family: 'Fira Code', monospace;
+  --code-font__font-size: 1em;
+  --code__background: var(--background-color);
+  --code__background_gutter: var(--background-color);
+  --code-inline__border: .5px solid #ddd;
+
+  --db-menu__background-color: inherit;
+  --db-menu__background-color_hover: #fff;
+  --db-menu__box-shadow: #bfccd6;
+  --db-menu-title__color: #ced9e0;
+
+  --datepicker__background-color: inherit;
+  --datepicker__color: #fff;
+  --datepicker__color_other-month: #fff;
+  --datepicker-day__background_hover: var(--background-highlight-alt);
+  --datepicker-day__color_hover: var(--primary-color);
+  --datepicker-today__border: #fff;
+
+  --dialog__background: var(--background-highlight);
+  --dialog__color: #fff;
+  --dialog-input__background: var(--background-highlight);
+
+  --emoji__background-color: var(--background-color);
+  --emoji__border: rgb(19, 124, 189);
+  --emoji__color: rgb(14, 90, 138);
+
+  --encrypted__background-color: #f5f8fa;
+  --encrypted__color: #8a9ba8;
+  --encrypted__font-size: 12px;
+
+  --external-link__color: #ff628c;
+  --external-link__text-decoration: underline;
+
+  --inline-block__background-color: #f5f8fa;
+  --inline-block__border: #ebf1f5;
+  --inline-search__background-color: white;
+
+  --kanban-board__background-color: #a7b6c2;
+  --kanban-card__background-color: white;
+  --kanban-card__color: #6d9cbe;
+  --kanban-column__background-color: #ededed;
+  --kanban-column__color: #fff;
+
+  --linked-reference__backgound-color_1: var(--background-highlight);
+  --linked-reference__backgound-color_2: var(--background-highlight-alt);
+  --linked-reference__backgound-color_3: var(--background-highlight-alt);
+
+  --menu__color: inherit;
+  --menu__background: #193549;
+
+  --page-brackets__color: #a7b6c2;
+  --page-link__color: var(--primary-color);
+  --page-link-namespace__color: #ff0088;
+
+  --pomodoro__background: transparent;
+  --pomodoro__color: #fff;
+  --pomodoro__border-color: #fff;
+
+  --query__border: 0.5px solid #bfccd6;
+  --query__color_query-string: #fff;
+
+  --rm-g__background-color_block: #f5f8fa;
+  --rm-g__background-color_left-border: #394b59;
+
+  --select-menu__background-color: inherit;
+
+  --table__border: 1px solid grey;
+  --table__font-size: 12px;
+
+  --tag__background-color_hover: inherit;
+  --tag__border-radius: inherit;
+  --tag__color: #a7b6c2;
+  --tag__color_hover: inherit;
+  --tag__color_hashtag: var(--tag__color);
+  --tag__padding: inherit;
+
+  --todo-checkmark__background-color: var(--background-highlight-alt);
+  --todo-checkmark__color: var(--primary-color);
+
+  --version-bullet__background-color: #3ad900;
+  --version-bullet__border: #3ad900;
+
+  /* layout */
+
+  /* body */
+
+  --body__background-color: var(--background-color);
+  --main-font__color: #fff;
+  --main-font__font-family: 'Montserrat', sans-serif;
+  --main-font__font-size: 14px;
+  --caret__color: #ff628c;
+  --accent__color: #3ad900;
+  --accent__color_alert: #ff0088;
+  --accent__color-font: #ffc600;
+
+  --block-highlight__background-color_selected: #7cccff;
+  --block-highlight__background-color_active: transparent;
+  --block-highlight__background-color_mentions: yellow;
+
+  --bullet__background-color: #fff;
+  --bullet__border_closed: #ced9e0;
+  --bullet-outline__border: #bfccd6;
+  --bullet-outline__border_hover: #fff;
+
+  --section-divider_border-top: #738694;
+
+  /* breadcrumb */
+
+  --breadcrumb__background-color: inherit;
+  --breadcrumb__color: #fff;
+  --breadcrumb__font-size: 14px;
+
+  /* help */
+
+  --help__background-color: inherit;
+  --help__border: #e8eaeb;
+  --help__color: inherit;
+
+  /* left sidebar */
+
+  --left-sidebar__background-color: #122738;
+  --left-sidebar__background-color_hover: #122738;
+  --left-sidebar__color: #fff;
+  --left-sidebar__color_hover: #3ad900;
+  --left-sidebar__font-size: 14px;
+  --left-sidebar-shortcuts__color: var(--left-sidebar__color);
+  --left-sidebar-shortcuts__color_title: var(--left-sidebar__color);
+  --left-sidebar-shortcuts__font-size: 14px;
+
+  /* right sidebar */
+
+  --right-sidebar__color_title-closed: inherit;
+  --right-sidebar__background-color: rgba(92, 112, 128, 0.05);
+  --right-sidebar-masonry__background-color: inherit;
+  --right-sidebar-masonry__border: inherit;
+  --right-sidebar__border: rgb(138, 155, 168);
+
+  /* scrollbar */
+
+  --scrollbar-track: #ffffff10;
+  --scrollbar-thumb: rgba(153, 153, 153, 0.1);
+
+  /* topbar */
+
+  --status-icon__background-color_saving-local: #99280f;
+  --status-icon__background-color_saving-remote: #d9822b;
+  --status-icon__background-color_synched: #0f9960;
+  --search__background: var(--background-highlight);
+  --search__background-color_selected-row: var(--background-highlight-alt);
+  --search__color_body: var(--background-highlight-alt);
+  --search__color_new-page: #3ad900;
+  --search__color_page: #fff;
+  --search__border: 0 0 0 1px #fff, 0 0 0 3px rgba(19, 124, 189, 0.3),
+    inset 0 1px 1px rgba(16, 22, 26, 0.2); // JH: TODO update the style to reflect a full rule rather than just a single color
+  --topbar__background-color: var(--background-color);
+  --topbar__border: #ff0088;
+
+  /* typography */
+
+  --calculation__color: #0a6640;
+  --emphasis__color: inherit;
+  --h1__color: #fff;
+  --h1__color_link: var(--page-link__color);
+  --h1__font-family: var(--main-font__font-family);
+  --h1__font-size: 1.8rem;
+  --h1__font-weight: 400;
+  --h2__color: #fff;
+  --h2__color_link: var(--page-link__color);
+  --h2__font-family: var(--h1__font-family);
+  --h2__font-size: 1.4rem;
+  --h2__font-weight: 400;
+  --h3__color: #fff;
+  --h3__color_link: var(--page-link__color);
+  --h3__font-family: var(--h1__font-family);
+  --h3__font-size: 1.2rem;
+  --h2__font-weight: 500;
+  --highlight__background-color: #ffc600;
+  --highlight__color: inherit;
+  --highlight-link-color: inherit;
+  --hr__border: #fff;
+  --hr__margin-bottom: inherit;
+  --hr__margin-top: 10px;
+  --strikethrough__color: inherit;
+  --strikethrough__font-style: normal;
+  --strikethrough__opacity: 1;
+  --strong__color: inherit;
+  --strong__font-weight: bold;
+
+  /* pages */
+
+  /* all pages */
+  --pages-checkmark__background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(255, 255, 255, 0.8)),
+    to(rgba(255, 255, 255, 0))
+  );
+  --pages-delete__background-color: #f5f8fa;
+  --pages-delete__border-color: #d8e1e8;
+  --pages-header__background-color: var(--background-color);
+  --pages-header__color: #bfccd6;
+  --pages-mentions__background-color_empty: white;
+  --pages-mentions__background-color: #2b95d6;
+  --pages-mentions__color_empty: #0e5a8a;
+  --pages-search-field__background-color: #f5f8fa;
+  --pages-search-field__border-color: #8a9ba8;
+  --pages-table__border-color: #e1e8ed;
+  --pages-header__color_sorted: #fff;
+
+  /* icons */
+
+  --icon__background-color_hover: rgba(167, 182, 194, 0.3);
+  --icon__color: #fff;
+  --icon__color_hover: #3ad900;
+  --filter__color_subscript: #3ad900;
+}
