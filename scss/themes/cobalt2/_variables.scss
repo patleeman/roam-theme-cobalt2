@@ -66,7 +66,7 @@
   --encrypted__color: #8a9ba8;
   --encrypted__font-size: 12px;
 
-  --external-link__color: #ff628c;
+  --external-link__color: var(--primary-color);
   --external-link__text-decoration: underline;
 
   --inline-block__background-color: #f5f8fa;
@@ -88,7 +88,7 @@
 
   --page-brackets__color: #a7b6c2;
   --page-link__color: var(--primary-color);
-  --page-link-namespace__color: #ff0088;
+  --page-link-namespace__color: var(--primary-color);
 
   --pomodoro__background: transparent;
   --pomodoro__color: #fff;
@@ -113,7 +113,7 @@
   --tag__padding: inherit;
 
   --todo-checkmark__background-color: var(--background-highlight-alt);
-  --todo-checkmark__color: var(--primary-color);
+  --todo-checkmark__color: #fff;
 
   --version-bullet__background-color: #3ad900;
   --version-bullet__border: #3ad900;
