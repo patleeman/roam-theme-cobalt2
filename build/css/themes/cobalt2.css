@@ -163,7 +163,7 @@
   --status-icon__background-color_saving-remote: var(--orange);
   --status-icon__background-color_synched: var(--mint);
   --search__background: var(--blue);
-  --search__background-color_selected-row: var(--off-blue);
+  --search__background-color_selected-row: var(--dusty-blue);
   --search__color_body: var(--off-blue);
   --search__color_new-page: var(--mint);
   --search__color_page: var(--white);
@@ -1661,6 +1661,11 @@ div[style*='border-bottom: 1px solid rgb(138, 155, 168);'] {
 
 .window-headers a {
   color: var(--right-sidebar__color_title-closed);
+}
+
+/* CSS Trigger button */
+.rm-roam-css .bp3-button {
+  border: 1px solid var(--icon__color);
 }
 
 /* components */
