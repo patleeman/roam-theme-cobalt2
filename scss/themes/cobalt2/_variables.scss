@@ -1,16 +1,36 @@
 :root {
+  /* Official Cobalt2 Colors */
+  /* https://github.com/wesbos/cobalt2 */
+  --yellow: #ffc600;
+  --orange: #FF9D00;
+  --mint: #2AFFDF;
+  --blue: #193549;
+  --off-blue: #0D3A58;
+  --dusty-blue: #35434d;
+  --dark-blue: #15232D;
+  --pink: #FB94FF;
+  --light-blue: #9EFFFF;
+
+  /* Non-standard Cobalt 2 colors */
+  --red: #ff0088;
+  --grey: #738694;
+  --dark-grey: #30404d;
+  --white: #fff;
+  --off-white: #ddd;
+
+
   /* Roam default variables */
 
-  --primary-color: #ff9d00;
+  --primary-color: var(--orange);
   --s1: 8px;
-  --background-color: #193549;
-  --background-highlight: #234E6D;
-  --background-highlight-alt: #1F4662;
+  --background-color: var(--blue);
+  --background-highlight: var(--dusty-blue);
+  --background-highlight-alt: var(--off-blue);
 
   /* Components */
 
-  --alias__background-color: #193549; /* Legacy alias */
-  --alias__color: rgb(245, 86, 86);
+  --alias__background-color: var(--blue); /* Legacy alias */
+  --alias__color: var(--pink);
 
   --attr__color: var(--main-font__color);
   --attr__font-weight: bold;
@@ -24,81 +44,81 @@
   --block-ref__border-left_inline: var(--primary-color);
 
   --block-embed__background-color: inherit;
-  --block-embed__background-color_margin-action: #738694;
-  --block-embed__border-left_margin-action: #1F4662;
+  --block-embed__background-color_margin-action: var(--grey);
+  --block-embed__border-left_margin-action: var(--off-blue);
 
   --blockquote__background-color: inherit;
-  --blockquote__border_color: #30404d;
+  --blockquote__border_color: var(--dark-grey);
   --blockquote__border-left: 5px solid;
   --blockquote__color: inherit;
   --blockquote__font-size: 14px;
   --blockquote__text-align: inherit;
   --blockquote__text-justify: inherit;
 
-  --code-font__color: #fff;
+  --code-font__color: var(--white);
   --code-font__font-family: 'Fira Code', monospace;
   --code-font__font-size: 1em;
-  --code__background: var(--background-color);
-  --code__background_gutter: var(--background-color);
-  --code-inline__border: .5px solid #ddd;
+  --code__background: var(--dark-blue);
+  --code__background_gutter: var(--dark-blue);
+  --code-inline__border: .25px solid var(--off-white);
 
   --db-menu__background-color: inherit;
-  --db-menu__background-color_hover: #fff;
-  --db-menu__box-shadow: #bfccd6;
-  --db-menu-title__color: #ced9e0;
+  --db-menu__background-color_hover: var(--dark-blue);
+  --db-menu__box-shadow: var(--dark-blue);
+  --db-menu-title__color: var(--white);
 
   --datepicker__background-color: inherit;
-  --datepicker__color: #fff;
-  --datepicker__color_other-month: #fff;
+  --datepicker__color: var(--white);
+  --datepicker__color_other-month: var(--white);
   --datepicker-day__background_hover: var(--background-highlight-alt);
   --datepicker-day__color_hover: var(--primary-color);
-  --datepicker-today__border: #fff;
+  --datepicker-today__border: var(--white);
 
   --dialog__background: var(--background-highlight);
-  --dialog__color: #fff;
+  --dialog__color: var(--white);
   --dialog-input__background: var(--background-highlight);
 
   --emoji__background-color: var(--background-color);
-  --emoji__border: rgb(19, 124, 189);
-  --emoji__color: rgb(14, 90, 138);
+  --emoji__border: var(--light-blue);
+  --emoji__color: var(--off-blue);
 
-  --encrypted__background-color: #f5f8fa;
-  --encrypted__color: #8a9ba8;
+  --encrypted__background-color: var(--off-white);
+  --encrypted__color: var(--mint);
   --encrypted__font-size: 12px;
 
   --external-link__color: var(--primary-color);
   --external-link__text-decoration: underline;
 
-  --inline-block__background-color: #f5f8fa;
-  --inline-block__border: #ebf1f5;
-  --inline-search__background-color: white;
+  --inline-block__background-color: var(--dusty-blue);
+  --inline-block__border: var(--off-blue);
+  --inline-search__background-color: var(--blue);
 
-  --kanban-board__background-color: #a7b6c2;
-  --kanban-card__background-color: white;
-  --kanban-card__color: #6d9cbe;
-  --kanban-column__background-color: #ededed;
-  --kanban-column__color: #fff;
+  --kanban-board__background-color: var(--dusty-blue);
+  --kanban-card__background-color: var(--blue);
+  --kanban-card__color: var(--white);
+  --kanban-column__background-color: var(--dusty-blue);
+  --kanban-column__color: var(--white);
 
-  --linked-reference__backgound-color_1: var(--background-highlight);
-  --linked-reference__backgound-color_2: var(--background-highlight-alt);
-  --linked-reference__backgound-color_3: var(--background-highlight-alt);
+  --linked-reference__backgound-color_1: var(--off-blue);
+  --linked-reference__backgound-color_2: var(--dusty-blue);
+  --linked-reference__backgound-color_3: var(--dusty-blue);
 
-  --menu__color: inherit;
-  --menu__background: #193549;
+  --menu__color: var(--white);
+  --menu__background: var(--off-blue);
 
-  --page-brackets__color: #a7b6c2;
+  --page-brackets__color: var(--off-white);
   --page-link__color: var(--primary-color);
   --page-link-namespace__color: var(--primary-color);
 
   --pomodoro__background: transparent;
-  --pomodoro__color: #fff;
-  --pomodoro__border-color: #fff;
+  --pomodoro__color: var(--white);
+  --pomodoro__border-color: var(--white);
 
   --query__border: 0.5px solid #bfccd6;
-  --query__color_query-string: #fff;
+  --query__color_query-string: var(--white);
 
-  --rm-g__background-color_block: #f5f8fa;
-  --rm-g__background-color_left-border: #394b59;
+  --rm-g__background-color_block: var(--dark-blue);
+  --rm-g__background-color_left-border: var(--dark-blue);
 
   --select-menu__background-color: inherit;
 
@@ -107,45 +127,45 @@
 
   --tag__background-color_hover: inherit;
   --tag__border-radius: inherit;
-  --tag__color: #a7b6c2;
+  --tag__color: var(--grey);
   --tag__color_hover: inherit;
   --tag__color_hashtag: var(--tag__color);
   --tag__padding: inherit;
 
   --todo-checkmark__background-color: var(--background-highlight-alt);
-  --todo-checkmark__color: #fff;
+  --todo-checkmark__color: var(--white);
 
-  --version-bullet__background-color: #3ad900;
-  --version-bullet__border: #3ad900;
+  --version-bullet__background-color: var(--mint);
+  --version-bullet__border: var(--mint);
 
   /* layout */
 
   /* body */
 
   --body__background-color: var(--background-color);
-  --main-font__color: #fff;
+  --main-font__color: var(--white);
   --main-font__font-family: 'Montserrat', sans-serif;
   --main-font__font-size: 14px;
-  --caret__color: #ff628c;
-  --accent__color: #3ad900;
-  --accent__color_alert: #ff0088;
-  --accent__color-font: #ffc600;
+  --caret__color: var(--pink);
+  --accent__color: var(--mint);
+  --accent__color_alert: var(--red);
+  --accent__color-font: var(--yellow);
 
-  --block-highlight__background-color_selected: #7cccff;
+  --block-highlight__background-color_selected: var(--light-blue);
   --block-highlight__background-color_active: transparent;
-  --block-highlight__background-color_mentions: yellow;
+  --block-highlight__background-color_mentions: var(--yellow);
 
-  --bullet__background-color: #fff;
-  --bullet__border_closed: #ced9e0;
-  --bullet-outline__border: #bfccd6;
-  --bullet-outline__border_hover: #fff;
+  --bullet__background-color: var(--white);
+  --bullet__border_closed: var(--off-white);
+  --bullet-outline__border: var(--off-white);
+  --bullet-outline__border_hover: var(--white);
 
-  --section-divider_border-top: #738694;
+  --section-divider_border-top: var(--grey);
 
   /* breadcrumb */
 
   --breadcrumb__background-color: inherit;
-  --breadcrumb__color: #fff;
+  --breadcrumb__color: var(--white);
   --breadcrumb__font-size: 14px;
 
   /* help */
@@ -156,10 +176,10 @@
 
   /* left sidebar */
 
-  --left-sidebar__background-color: #122738;
-  --left-sidebar__background-color_hover: #122738;
-  --left-sidebar__color: #fff;
-  --left-sidebar__color_hover: #3ad900;
+  --left-sidebar__background-color: var(--dark-blue);
+  --left-sidebar__background-color_hover: var(--dark-blue);
+  --left-sidebar__color: var(--white);
+  --left-sidebar__color_hover: var(--mint);
   --left-sidebar__font-size: 14px;
   --left-sidebar-shortcuts__color: var(--left-sidebar__color);
   --left-sidebar-shortcuts__color_title: var(--left-sidebar__color);
@@ -175,47 +195,47 @@
 
   /* scrollbar */
 
-  --scrollbar-track: #ffffff10;
+  --scrollbar-track: var(--white)fff10;
   --scrollbar-thumb: rgba(153, 153, 153, 0.1);
 
   /* topbar */
 
-  --status-icon__background-color_saving-local: #99280f;
-  --status-icon__background-color_saving-remote: #d9822b;
-  --status-icon__background-color_synched: #0f9960;
+  --status-icon__background-color_saving-local: var(--red);
+  --status-icon__background-color_saving-remote: var(--orange)
+  --status-icon__background-color_synched: var(--mint);
   --search__background: var(--background-highlight);
   --search__background-color_selected-row: var(--background-highlight-alt);
   --search__color_body: var(--background-highlight-alt);
-  --search__color_new-page: #3ad900;
-  --search__color_page: #fff;
-  --search__border: 0 0 0 1px #fff, 0 0 0 3px rgba(19, 124, 189, 0.3),
+  --search__color_new-page: var(--mint);
+  --search__color_page: var(--white);
+  --search__border: 0 0 0 1px var(--white), 0 0 0 3px rgba(19, 124, 189, 0.3),
     inset 0 1px 1px rgba(16, 22, 26, 0.2); // JH: TODO update the style to reflect a full rule rather than just a single color
   --topbar__background-color: var(--background-color);
-  --topbar__border: #ff0088;
+  --topbar__border: var(--mint);
 
   /* typography */
 
-  --calculation__color: #0a6640;
+  --calculation__color: var(--mint);
   --emphasis__color: inherit;
-  --h1__color: #fff;
+  --h1__color: var(--white);
   --h1__color_link: var(--page-link__color);
   --h1__font-family: var(--main-font__font-family);
   --h1__font-size: 1.8rem;
   --h1__font-weight: 400;
-  --h2__color: #fff;
+  --h2__color: var(--white);
   --h2__color_link: var(--page-link__color);
   --h2__font-family: var(--h1__font-family);
   --h2__font-size: 1.4rem;
   --h2__font-weight: 400;
-  --h3__color: #fff;
+  --h3__color: var(--white);
   --h3__color_link: var(--page-link__color);
   --h3__font-family: var(--h1__font-family);
   --h3__font-size: 1.2rem;
   --h2__font-weight: 500;
-  --highlight__background-color: #ffc600;
+  --highlight__background-color: var(--yellow);
   --highlight__color: inherit;
   --highlight-link-color: inherit;
-  --hr__border: #fff;
+  --hr__border: var(--white);
   --hr__margin-bottom: inherit;
   --hr__margin-top: 10px;
   --strikethrough__color: inherit;
@@ -234,22 +254,22 @@
     from(rgba(255, 255, 255, 0.8)),
     to(rgba(255, 255, 255, 0))
   );
-  --pages-delete__background-color: #f5f8fa;
-  --pages-delete__border-color: #d8e1e8;
+  --pages-delete__background-color: var(--white);
+  --pages-delete__border-color: var(--off-white);
   --pages-header__background-color: var(--background-color);
-  --pages-header__color: #bfccd6;
-  --pages-mentions__background-color_empty: white;
-  --pages-mentions__background-color: #2b95d6;
-  --pages-mentions__color_empty: #0e5a8a;
-  --pages-search-field__background-color: #f5f8fa;
-  --pages-search-field__border-color: #8a9ba8;
-  --pages-table__border-color: #e1e8ed;
-  --pages-header__color_sorted: #fff;
+  --pages-header__color: var(--off-white);
+  --pages-mentions__background-color_empty: var(--white);
+  --pages-mentions__background-color: var(--blue);
+  --pages-mentions__color_empty: var(--yellow);
+  --pages-search-field__background-color: var(--blue);
+  --pages-search-field__border-color: var(--dark-blue);
+  --pages-table__border-color: var(--blue);
+  --pages-header__color_sorted: var(--white);
 
   /* icons */
 
   --icon__background-color_hover: rgba(167, 182, 194, 0.3);
-  --icon__color: #fff;
-  --icon__color_hover: #3ad900;
-  --filter__color_subscript: #3ad900;
+  --icon__color: var(--white);
+  --icon__color_hover: var(--mint);
+  --filter__color_subscript: var(--mint);
 }
