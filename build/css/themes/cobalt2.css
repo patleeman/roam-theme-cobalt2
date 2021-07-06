@@ -1,224 +1,230 @@
-@charset "UTF-8";
 /*
-### ROAM Railscast THEME ###
-> Many thanks to the Roam Slack community for all the resources, particularly @Anthony, @Calhistoriaan, @Devon, @Murf, @Malcolm Ocean, @David Cranall @Ahbay and most importantly Daniel van der Merwe @vandermerwed.
-> Edits by Jeff Harris
-> v2.0.12
+### Cobalt2 ###
+> Notes
+> Inspired by [Wes Bos' Cobalt2 theme](https://github.com/wesbos/vscode-theme-cobalt2).
+> v1.0.0
 */
 :root {
+  /* Official Cobalt2 Colors */
+  /* https://github.com/wesbos/cobalt2 */
+  --yellow: #ffc600;
+  --orange: #ff9d00;
+  --mint: #2affdf;
+  --blue: #193549;
+  --off-blue: #0d3a58;
+  --dusty-blue: #35434d;
+  --dark-blue: #15232d;
+  --pink: #fb94ff;
+  --light-blue: #9effff;
+  /* Non-standard Cobalt 2 colors */
+  --red: #ff0088;
+  --grey: #738694;
+  --dark-grey: #30404d;
+  --white: #fff;
+  --off-white: #ddd;
   /* Roam default variables */
-  --primary-color: #137cbd;
+  --primary-color: var(--orange);
   --s1: 8px;
-  --background-color: #e1e8ed;
+  --background-color: var(--blue);
+  --background-highlight: var(--dusty-blue);
+  --background-highlight-alt: var(--off-blue);
   /* Components */
-  --alias__background-color: transparent;
+  --alias__background-color: var(--blue);
   /* Legacy alias */
-  --alias__color: #d8ac11;
-  --attr__color: rgba(17, 137, 189, 0.65);
-  --attr__font-weight: 700;
+  --alias__color: var(--pink);
+  --attr__color: var(--main-font__color);
+  --attr__font-weight: bold;
   --block-ref__background-color: none;
-  --block-ref__background-color_hover: #111;
-  --block-ref__border-bottom: rgba(254, 207, 43, 0.4);
-  --block-ref__color_hover: #eb9854;
+  --block-ref__background-color_hover: var(--background-highlight);
+  --block-ref__border-bottom: var(--background-highlight-alt);
+  --block-ref__color_hover: inherit;
   --block-ref__font-size: 1em;
-  --block-ref__background-color_inline: rgba(33, 33, 33, 0.5);
-  --block-ref__border-left_inline: var(--blockquote__border_color);
-  --block-embed__background-color: #d8ac6e0e;
-  --block-embed__background-color_margin-action: var(--blockquote__border_color);
-  --block-embed__border-left_margin-action: var(--bullet-outline__border_hover);
-  --blockquote__background-color: none;
-  --blockquote__border_color: #30404d;
-  --blockquote__border-left: 5px solid;
-  --blockquote__color: rgba(109, 156, 190, 0.89);
+  --block-ref__background-color_inline: var(--background-highlight-alt);
+  --block-ref__border-left_inline: var(--primary-color);
+  --block-embed__background-color: inherit;
+  --block-embed__background-color_margin-action: var(--grey);
+  --block-embed__border-left_margin-action: var(--off-blue);
+  --blockquote__background-color: inherit;
+  --blockquote__border_color: var(--mint);
+  --blockquote__border-left: 4px solid;
+  --blockquote__color: inherit;
   --blockquote__font-size: 14px;
-  --blockquote__text-align: justify;
-  --blockquote__text-justify: inter-word;
-  --code-font__color: #6d9cbe;
-  --code-font__font-family: 'Source Code Pro', monospace;
-  --code-font__font-size: 0.9rem;
-  --code__background: #002b36;
-  --code__background_gutter: #073642;
-  --code-inline__border: none;
-  --db-menu__background-color: #333;
-  --db-menu__background-color_hover: var(--icon__background-color_hover);
-  --db-menu__box-shadow: #000;
-  --db-menu-title__color: #eb9854;
-  --datepicker__background-color: var(--menu__background);
-  --datepicker__color: var(--menu__color);
-  --datepicker__color_other-month: rgba(92, 112, 128, 0.6);
-  --datepicker-day__background_hover: var(--accent__color);
-  --datepicker-day__color_hover: #333;
-  --datepicker-today__border: #d9822b7a;
-  --dialog__background: #333;
-  --dialog__color: #999;
-  --dialog-input__background: #444;
-  --emoji__background-color: #2d2d2d;
-  --emoji__border: rgba(225, 117, 28, 0.4);
-  --emoji__color: #aaa;
-  --encrypted__background-color: transparent;
-  --encrypted__color: #ff6000;
-  --encrypted__font-size: 0.857142857em;
-  --external-link__color: #8dbb40;
+  --blockquote__text-align: inherit;
+  --blockquote__text-justify: inherit;
+  --code-font__color: var(--white);
+  --code-font__font-family: 'Fira Code', monospace;
+  --code-font__font-size: 1em;
+  --code__background: var(--dark-blue);
+  --code__background_gutter: var(--dark-blue);
+  --code-inline__border: 0.25px solid var(--off-white);
+  --db-menu__background-color: inherit;
+  --db-menu__background-color_hover: var(--dark-blue);
+  --db-menu__box-shadow: var(--dark-blue);
+  --db-menu-title__color: var(--white);
+  --datepicker__background-color: inherit;
+  --datepicker__color: var(--white);
+  --datepicker__color_other-month: var(--white);
+  --datepicker-day__background_hover: var(--background-highlight-alt);
+  --datepicker-day__color_hover: var(--primary-color);
+  --datepicker-today__border: var(--white);
+  --dialog__background: var(--background-highlight);
+  --dialog__color: var(--white);
+  --dialog-input__background: var(--background-highlight);
+  --emoji__background-color: var(--background-color);
+  --emoji__border: var(--light-blue);
+  --emoji__color: var(--off-blue);
+  --encrypted__background-color: var(--off-white);
+  --encrypted__color: var(--mint);
+  --encrypted__font-size: 12px;
+  --external-link__color: var(--primary-color);
   --external-link__text-decoration: underline;
-  --inline-block__background-color: transparent;
-  --inline-block__border: none;
-  --inline-search__background-color: #333;
-  --kanban-board__background-color: #333333;
-  --kanban-card__background-color: #555555;
-  --kanban-card__color: #6d9cbe;
-  --kanban-column__background-color: #454545;
-  --kanban-column__color: var(--accent__color);
-  --linked-reference__backgound-color_1: #d8ac6e1a;
-  --linked-reference__backgound-color_2: #d8ac6e1a;
-  --linked-reference__backgound-color_3: #d8ac6e1a;
-  --menu__color: var(--accent__color);
-  --menu__background: #333;
-  --mermaid-path__stroke: #555;
-  --mermaid-element__fill: #594032;
-  --mermaid-element__stroke: var(--accent__color);
-  --page-brackets__color: rgba(228, 124, 67, 0.25);
-  --page-link__color: #eb9854;
-  --page-link-namespace__color: #f57030;
+  --inline-block__background-color: var(--dusty-blue);
+  --inline-block__border: var(--off-blue);
+  --inline-search__background-color: var(--blue);
+  --kanban-board__background-color: var(--dark-blue);
+  --kanban-card__background-color: var(--blue);
+  --kanban-card__color: var(--white);
+  --kanban-column__background-color: var(--dark-blue);
+  --kanban-column__color: var(--white);
+  --linked-reference__backgound-color_1: var(--off-blue);
+  --linked-reference__backgound-color_2: var(--dusty-blue);
+  --linked-reference__backgound-color_3: var(--dusty-blue);
+  --menu__color: var(--white);
+  --menu__background: var(--off-blue);
+  --page-brackets__color: var(--off-white);
+  --page-link__color: var(--primary-color);
+  --page-link-namespace__color: var(--primary-color);
   --pomodoro__background: transparent;
-  --pomodoro__background_break: transparent;
-  --pomodoro__background_running: transparent;
-  --pomodoro__border-color: #fc596370;
-  --pomodoro__border-color_break: #8dbb40;
-  --pomodoro__border-color_running: var(--pomodoro__border-color);
-  --pomodoro__color: #fc5963;
-  --pomodoro__color_break: #8dbb40;
-  --pomodoro__color_running: var(--pomodoro__color);
-  --query__border: 0.75px solid #f2c98f1a;
-  --query__color_query-string: #5c7080;
-  --rm-g__background-color_block: var(--inline-search__background-color);
-  --rm-g__background-color_left-border: #ab6634;
-  --select-menu__background-color: #232323;
-  --table__border: 1px solid #444;
-  --table__font-size: 0.85em;
-  --tag__background-color_hover: var(--accent__color);
-  --tag__border-radius: 2em;
-  --tag__color: #777;
-  --tag__color_hover: #fff;
-  --tag__color_hashtag: #ab6634;
-  --tag__padding: 0.071428571em 0.428571429em 0.214285714em;
-  --todo-checkmark__background-color: #555;
-  --todo-checkmark__color: #137cbd;
-  --version-bullet__background-color: #137cbd;
-  --version-bullet__border: #137cbd;
-  /* YouTube Timestamp js extension */
-  --yt-play-button__color: rgba(225, 117, 28, 1);
-  --yt-play-button__background-color: rgba(108, 109, 36, 0.1);
-  --yt-play-button__background-color_hover: rgba(109, 77, 36, 0.25);
+  --pomodoro__color: var(--white);
+  --pomodoro__border-color: var(--white);
+  --query__border: 0.5px solid #bfccd6;
+  --query__color_query-string: var(--white);
+  --rm-g__background-color_block: var(--dark-blue);
+  --rm-g__background-color_left-border: var(--dark-blue);
+  --select-menu__background-color: inherit;
+  --table__border: 1px solid grey;
+  --table__font-size: 12px;
+  --tag__background-color_hover: inherit;
+  --tag__border-radius: inherit;
+  --tag__color: var(--grey);
+  --tag__color_hover: inherit;
+  --tag__color_hashtag: var(--tag__color);
+  --tag__padding: inherit;
+  --todo-checkmark__background-color: var(--background-highlight-alt);
+  --todo-checkmark__color: var(--white);
+  --version-bullet__background-color: var(--mint);
+  --version-bullet__border: var(--mint);
   /* layout */
   /* body */
-  --body__background-color: #2c2c2c;
-  --main-font__color: #999;
-  --main-font__font-family: 'Inter', sans-serif;
+  --body__background-color: var(--background-color);
+  --main-font__color: var(--white);
+  --main-font__font-family: 'Montserrat', sans-serif;
   --main-font__font-size: 14px;
-  --caret__color: #0080ff;
-  --accent__color: #e98924;
-  --accent__color_alert: #ff6000;
-  --accent__color-font: #1189bd;
-  --block-highlight__background-color_selected: #00588e;
-  --block-highlight__background-color_active: rgba(255, 255, 255, 0.05);
-  --block-highlight__background-color_mentions: #312c28;
-  --bullet__background-color: rgba(225, 117, 28, 0.3);
-  --bullet__border_closed: rgba(225, 117, 28, 1);
-  --bullet-outline__border: #404040;
-  --bullet-outline__border_hover: rgba(255, 149, 0, 0.4);
-  --section-divider_border-top: 1px solid #e9892475;
+  --caret__color: var(--pink);
+  --accent__color: var(--mint);
+  --accent__color_alert: var(--red);
+  --accent__color-font: var(--yellow);
+  --block-highlight__background-color_selected: var(--light-blue);
+  --block-highlight__background-color_active: transparent;
+  --block-highlight__background-color_mentions: var(--yellow);
+  --bullet__background-color: var(--white);
+  --bullet__border_closed: var(--off-white);
+  --bullet-outline__border: var(--off-white);
+  --bullet-outline__border_hover: var(--white);
+  --section-divider_border-top: var(--grey);
   /* breadcrumb */
-  --breadcrumb__background-color: transparent;
-  --breadcrumb__font-size: 13px;
+  --breadcrumb__background-color: inherit;
+  --breadcrumb__color: var(--white);
+  --breadcrumb__font-size: 14px;
   /* help */
-  --help__background-color: #333;
-  --help__border: var(--hr__border);
-  --help__color: var(--main-font__color);
+  --help__background-color: inherit;
+  --help__border: #e8eaeb;
+  --help__color: inherit;
   /* left sidebar */
-  --left-sidebar__background-color: #323232;
-  --left-sidebar__background-color_hover: #1f1f1f;
-  --left-sidebar__color: #1189bd;
-  --left-sidebar__color_hover: var(--accent__color);
-  --left-sidebar__font-size: 0.9em;
+  --left-sidebar__background-color: var(--dark-blue);
+  --left-sidebar__background-color_hover: var(--dark-blue);
+  --left-sidebar__color: var(--white);
+  --left-sidebar__color_hover: var(--mint);
+  --left-sidebar__font-size: 14px;
   --left-sidebar-shortcuts__color: var(--left-sidebar__color);
   --left-sidebar-shortcuts__color_title: var(--left-sidebar__color);
-  --left-sidebar-shortcuts__font-size: 1rem;
+  --left-sidebar-shortcuts__font-size: 14px;
   /* right sidebar */
-  --right-sidebar__color_title-closed: var(--accent__color-font);
-  --right-sidebar__background-color: #323232;
-  --right-sidebar__border: #e9892475;
-  --right-sidebar-masonry__background-color: var(--body__background-color);
-  --right-sidebar-masonry__border: #3d3d3d;
+  --right-sidebar__color_title-closed: inherit;
+  --right-sidebar__background-color: rgba(92, 112, 128, 0.05);
+  --right-sidebar-masonry__background-color: inherit;
+  --right-sidebar-masonry__border: inherit;
+  --right-sidebar__border: rgb(138, 155, 168);
   /* scrollbar */
-  --scrollbar-thumb: #ffffff10;
-  --scrollbar-track: rgba(153, 153, 153, 0.1);
+  --scrollbar-track: var(--white) fff10;
+  --scrollbar-thumb: rgba(153, 153, 153, 0.1);
   /* topbar */
-  --status-icon__background-color_saving-local: #99280f;
-  --status-icon__background-color_saving-remote: #d9822b;
-  --status-icon__background-color_synched: #0f9960;
-  --search__background: #252525;
-  --search__background-color_selected-row: #4c4c4c;
-  --search__color_body: #8a9ba8;
-  --search__color_new-page: #8dbb40;
-  --search__color_page: #af671c;
-  --search__border: #e9892475;
-  --topbar__background-color: var(--body__background-color);
-  --topbar__border: #333;
+  --status-icon__background-color_saving-local: var(--red);
+  --status-icon__background-color_saving-remote: var(--orange);
+  --status-icon__background-color_synched: var(--mint);
+  --search__background: var(--blue);
+  --search__background-color_selected-row: var(--off-blue);
+  --search__color_body: var(--off-blue);
+  --search__color_new-page: var(--mint);
+  --search__color_page: var(--white);
+  --search__border: 0 0 0 1px var(--white), 0 0 0 3px rgba(19, 124, 189, 0.3),
+    inset 0 1px 1px rgba(16, 22, 26, 0.2);
+  --topbar__background-color: var(--background-color);
+  --topbar__border: var(--mint);
   /* typography */
-  --calculation__color: #ff6000;
-  --emphasis__color: #fc5963;
-  --h1__color: #1189bd;
+  --calculation__color: var(--mint);
+  --emphasis__color: inherit;
+  --h1__color: var(--white);
   --h1__color_link: var(--page-link__color);
   --h1__font-family: var(--main-font__font-family);
-  --h1__font-size: 2.25em;
+  --h1__font-size: 1.8rem;
   --h1__font-weight: 400;
-  --h2__color: #1189bd;
+  --h2__color: var(--white);
   --h2__color_link: var(--page-link__color);
   --h2__font-family: var(--h1__font-family);
-  --h2__font-size: 1.625em;
+  --h2__font-size: 1.4rem;
   --h2__font-weight: 400;
-  --h3__color: #1189bd;
+  --h3__color: var(--white);
   --h3__color_link: var(--page-link__color);
   --h3__font-family: var(--h1__font-family);
-  --h3__font-size: 1.3em;
-  --h3__font-weight: 700;
-  --highlight__background-color: #008aff5e;
-  --highlight__color: #bbb;
-  --highlight-link-color: #ff6000;
-  --hr__border: rgba(225, 117, 28, 0.5);
-  --hr__margin-bottom: 2.5em;
-  --hr__margin-top: 11px;
+  --h3__font-size: 1.2rem;
+  --h2__font-weight: 500;
+  --highlight__background-color: var(--yellow);
+  --highlight__color: inherit;
+  --highlight-link-color: inherit;
+  --hr__border: var(--white);
+  --hr__margin-bottom: inherit;
+  --hr__margin-top: 10px;
   --strikethrough__color: inherit;
-  --strikethrough__font-style: italic;
-  --strikethrough__opacity: 0.6;
-  --strong__color: #508bb5;
-  --strong__font-weight: 700;
+  --strikethrough__font-style: normal;
+  --strikethrough__opacity: 1;
+  --strong__color: inherit;
+  --strong__font-weight: bold;
   /* pages */
   /* all pages */
   --pages-checkmark__background-image: -webkit-gradient(
     linear,
     left top,
     left bottom,
-    from(rgba(82, 82, 82, 0.8)),
-    to(rgba(0, 0, 0, 0))
+    from(rgba(255, 255, 255, 0.8)),
+    to(rgba(255, 255, 255, 0))
   );
-  --pages-delete__background-color: #222;
-  --pages-delete__border-color: #ff6000;
-  --pages-header__background-color: #262626;
-  --pages-header__color: #bfccd6;
-  --pages-header__color_sorted: #508bb5;
-  --pages-mentions__background-color: #ff6000;
-  --pages-mentions__background-color_empty: #3a3a3a;
-  --pages-mentions__color_empty: #737373;
-  --pages-row__background-color_highlight: #292929;
-  --pages-search-field__background-color: #3a3a3a;
-  --pages-search-field__border-color: #e9892475;
-  --pages-table__border-color: #2f373d;
+  --pages-delete__background-color: var(--white);
+  --pages-delete__border-color: var(--off-white);
+  --pages-header__background-color: var(--background-color);
+  --pages-header__color: var(--off-white);
+  --pages-mentions__background-color_empty: var(--white);
+  --pages-mentions__background-color: var(--blue);
+  --pages-mentions__color_empty: var(--yellow);
+  --pages-search-field__background-color: var(--blue);
+  --pages-search-field__border-color: var(--dark-blue);
+  --pages-table__border-color: var(--blue);
+  --pages-header__color_sorted: var(--white);
   /* icons */
   --icon__background-color_hover: rgba(167, 182, 194, 0.3);
-  --icon__color: #e78924;
-  --icon__color_hover: #e78924;
-  --filter__color_subscript: #5c7080;
+  --icon__color: var(--off-white);
+  --icon__color_hover: var(--mint);
+  --filter__color_subscript: var(--mint);
 }
 
 /* Icons */
@@ -1658,501 +1664,28 @@ div[style*='border-bottom: 1px solid rgb(138, 155, 168);'] {
 }
 
 /* components */
-/* Theme Alias */
-/* Legacy Alias */
-span[style*='background-color: rgb(235, 241, 245); border-radius: 4px;'] {
-  border-radius: 0 !important;
-  cursor: alias;
-  padding: 0 !important;
+.rm-topbar {
+  border-bottom: none;
+  border-top: 2px solid var(--topbar__border);
 }
 
-/* Theme block references */
-.rm-block-ref {
-  padding: 2px 2px 0;
-}
-
-/* Code - inline */
-code {
-  border-radius: 4px;
-  padding: 3px 4px;
-}
-
-/* Database menu */
-span.bp3-icon:empty::before {
-  padding-right: 0px;
-}
-
-/* Dialog window */
-.bp3-toast.bp3-intent-warning strong {
-  color: #fff !important;
-}
-
-/* Inline block */
-.rm-paren {
-  border-radius: 4px;
-}
-
-.rm-spacer {
-  font-size: 1.1em;
-  position: relative;
-  top: 3px;
-}
-.rm-spacer svg {
-  height: 16px;
-  width: 16px;
-}
-
-/* Linked reference */
-.rm-reference-container {
-  margin-bottom: 2em;
-}
-
-.rm-reference-item {
-  border-radius: 7px;
-  padding: 10px;
-  padding-right: 0;
-}
-.rm-reference-item .controls .block-expand {
-  margin-top: 0;
-}
-.rm-reference-item .rm-block-text {
-  padding-right: 30px;
-}
-
-/* Query */
-.rm-query {
-  border-radius: 7px;
-}
-.rm-query .rm-query-title {
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
-  font-size: 0.8em;
-  display: flex;
-}
-
-/* Tags */
-/* Hashtag color */
-.rm-page-ref--tag[data-tag='42SmartBlock']:before {
-  content: '#' !important;
-  color: var(--tag__color_hashtag) !important;
-  position: absolute;
-  visibility: visible;
-  background: none !important;
-}
-
-/* It is probably best to move these out and be used in roam/css code block */
-/* CUSTOM LINKS: Uncomment to use the section below to create custom styles for specific links. Change "Theme" to match some portion of the title of the link you want to customize. Adjust the background-color value ("ff6000") and color value ("fff") to suite your preferences. Duplicate the section for each new link to be customized */
-/* 
-span[data-link-title*="Theme"] .rm-page-ref-link-color,
-span[data-link-title*="Theme"] .rm-page-ref-namespace-color {
-  background-color: #ff6000;
-  color: #fff;
-  padding: 3px 7px;
-  line-height: 2em;
-  font-weight: 500;
-  border-radius: 0.1875em;
-}
- */
-/* Template for creating tags in the shape of flags */
-span[data-tag*='Meeting'] {
-  visibility: hidden;
-  padding-right: 28px;
-  padding-left: 0;
-}
-
-span[data-tag*='Meeting']:before {
-  content: 'Meeting';
-  visibility: visible;
-  background-color: #1189bd;
-  position: absolute;
-  color: #ddd;
-  padding-right: 24px;
-  padding-left: 10px;
-  clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
-  border-radius: 4px 0 0 4px;
-}
-
-/* special meeting tag for #.meeting */
-.rm-page-ref[data-tag*='meeting'] {
-  display: inline-flex;
-}
-
-span.rm-page-ref.rm-page-ref--tag[data-tag*='meeting']:hover {
-  background: none !important;
-}
-
-span[data-tag*='meeting'] {
-  padding-right: 24px;
-  padding-left: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-span[data-tag*='meeting']:before {
-  content: 'Meeting';
-  visibility: visible;
-  background-color: #1189bd;
-  position: absolute;
-  color: #ddd;
-  padding-right: 24px;
-  padding-left: 10px;
-  clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
-  border-radius: 4px 0 0 4px;
-}
-
-.meeting > div.rm-block-main {
-  color: var(--strong__color);
-}
-
-[data-tag]::before {
-  content: '#';
-  color: var(--tag__color_hashtag);
-  visibility: visible;
-  position: absolute;
-}
-
-[data-tag]:hover::before {
-  color: var(--tag__color_hover);
-}
-
-/* Todo checkmark */
-[data-page-links*='"DONE"'] > .rm-block__self {
-  opacity: 0.55;
-  /*   text-decoration: line-through; */
-}
-
-/* Twitter embeds */
-.twitter-tweet.twitter-tweet-rendered {
-  opacity: 0.6;
-  transition: opacity 0.25s ease-in-out;
-}
-
-.twitter-tweet:hover {
-  opacity: 0.9;
-}
-
-/* Body styles */
-.roam-block-container {
-  border-radius: 0px;
-  max-width: 100%;
-}
-
-.rm-block-text {
-  max-width: 100%;
-}
-
-.roam-center {
-  flex-basis: 50% !important;
-}
-
-/* Bullets */
-/* Scroll past the bottom */
-.roam-article {
-  position: relative;
-  height: auto !important;
-  padding-bottom: 40vh !important;
-}
-
-/* Breadcrumbs */
-.rm-zoom .rm-zoom-item .rm-zoom-item-content {
-  padding-bottom: 2px;
-  padding-top: 2px;
-}
-
-/* Left sidebar */
-.roam-body
-  .roam-app
-  .roam-sidebar-container
-  .roam-sidebar-content
-  .starred-pages-wrapper {
-  padding: 8px 0 !important;
-}
-.roam-body
-  .roam-app
-  .roam-sidebar-container
-  .roam-sidebar-content
-  .starred-pages-wrapper
-  .flex-h-box {
-  padding: 0 20px;
-}
-.roam-body
-  .roam-app
-  .roam-sidebar-container
-  .roam-sidebar-content
-  .starred-pages-wrapper
-  .starred-pages
-  .page {
-  padding: 8px 20px;
-}
-
-#roam-sidebar-logo img {
-  opacity: 0.4;
-}
-
-#roam-sidebar-logo span {
-  display: none;
-}
-
-/* Right sidebar */
-#right-sidebar .rm-block-text {
-  padding-right: 30px;
-}
-
-/* Topbar */
-.bp3-input {
-  box-shadow: none;
-  font-size: 0.85em;
-}
-.bp3-input[readonly] {
-  box-shadow: none;
-  font-size: 0.85em;
-}
-
+/* layout */
 /* Typography */
-.rm-heading-level-2 > .rm-block__self .rm-block__input {
-  letter-spacing: 0.001em;
+/* Google Fonts */
+.roam-body-main > div .roam-article > div .zoom-path-view .rm-zoom-item-content span {
+  color: var(--breadcrumb__color) !important;
 }
 
-.rm-heading-level-3 > .rm-block__self .rm-block__input {
-  letter-spacing: 0.002em;
+.rm-zoom .rm-zoom-item {
+  color: #fff;
 }
 
-.roam-body .roam-app {
-  color: var(--main-font__color);
+/* pages */
+/* All Pages */
+/* Font Family */
+div {
+  font-family: var(--main-font__font-family);
 }
 
-.rm-find-or-create-wrapper {
-  flex: 0 1 100% !important;
-}
-.rm-find-or-create-wrapper .bp3-transition-container {
-  width: 100%;
-}
-.rm-find-or-create-wrapper .bp3-menu {
-  max-width: none;
-  max-height: 400px;
-}
-.rm-find-or-create-wrapper .rm-menu-item {
-  border-radius: 2px;
-  cursor: pointer;
-  padding: 6px;
-}
-.rm-find-or-create-wrapper .rm-menu-item .rm-search-title {
-  font-weight: bold;
-}
-.rm-find-or-create-wrapper .rm-menu-item .rm-search-title .rm-new-page {
-  color: var(--search__color_new-page);
-}
-.rm-find-or-create-wrapper .rm-menu-item .rm-search-list-item {
-  color: var(--search__color_body);
-  margin-left: -20px;
-  overflow-wrap: break-spaces;
-  word-break: break-word;
-}
-
-/*  Block Callouts
-    Use special tags to create colored callout blocks
-    #.rm-block--grey will callout the entire block, including children
-    #.rm-self--grey will only callout the block the tag is added to
-    #.rm-child--grey will callout the children of the block the tag is added to
-
-    Available colors
-    --grey
-    --blue
-    --red
-    --orange
-    --yellow
-*/
-:root {
-  --block-callout__background-color_grey: #333;
-  --block-callout__background-color_blue: rgba(0, 170, 255, 0.1);
-  --block-callout__background-color_red: rgba(249, 87, 56, 0.25);
-  --block-callout__background-color_orange: rgba(238, 150, 75, 0.25);
-  --block-callout__background-color_yellow: rgba(244, 211, 94, 0.2);
-}
-
-.rm-block--grey,
-.rm-self--grey > div.rm-block-main,
-.rm-child--grey .rm-block-children {
-  background-color: var(--block-callout__background-color_grey);
-  border-radius: 0px 5px 5px 0px !important;
-}
-
-.rm-block--blue,
-.rm-self--blue > div.rm-block-main,
-.rm-child--blue .rm-block-children {
-  background-color: var(--block-callout__background-color_blue);
-  border-radius: 0px 5px 5px 0px !important;
-}
-
-.rm-block--red,
-.rm-self--red > div.rm-block-main,
-.rm-child--red .rm-block-children {
-  background-color: var(--block-callout__background-color_red);
-  border-radius: 0px 5px 5px 0px !important;
-}
-
-.rm-block--orange,
-.rm-self--orange > div.rm-block-main,
-.rm-child--orange .rm-block-children {
-  background-color: var(--block-callout__background-color_orange);
-  border-radius: 0px 5px 5px 0px !important;
-}
-
-.rm-block--yellow,
-.rm-self--yellow > div.rm-block-main,
-.rm-child--yellow .rm-block-children {
-  background-color: var(--block-callout__background-color_yellow);
-  border-radius: 0px 5px 5px 0px !important;
-}
-
-/* Bullet Zoom Focus
-When zoomed in on a bullet add the tag #.rm-focus to the parent block
-to create a minimal writing environment. This only works when zoomed in
-so there is no need to remove the tag when done.
-*/
-.zoom-path-view + div .rm-focus div,
-.zoom-path-view + div .rm-focus .rm-block-input {
-  font-family: 'Calendas Plus', 'Lora', 'Droid Serif', 'Georgia', serif;
-  font-size: 20px;
-  line-height: 1.5em;
-  /* space between lines */
-}
-
-.zoom-path-view + div .rm-focus .rm-multibar {
-  display: none;
-}
-
-.zoom-path-view + div .rm-focus.roam-block-container .roam-block-container {
-  margin-top: 0.7em;
-  /* space between blocks */
-}
-
-.zoom-path-view + div .rm-focus.roam-block-container .controls {
-  display: none;
-}
-
-.zoom-path-view + div .rm-focus .block-border-left {
-  border: none;
-}
-
-.zoom-path-view + div .rm-focus .rm-level-1 {
-  margin-left: -4px;
-}
-
-/* Page date link - organized by quarter */
-:root {
-  /* Seasonal colors for date links */
-  --page-link-date__color_q1: #50b2c0;
-  --page-link-date__color_q2: #c5d86d;
-  --page-link-date__color_q3: #ff6b6b;
-  --page-link-date__color_q4: #ca7d4a;
-}
-
-span[data-link-title^='January '] .rm-page-ref--link,
-span[data-link-title^='February '] .rm-page-ref--link,
-span[data-link-title^='March '] .rm-page-ref--link {
-  color: var(--page-link-date__color_q1);
-}
-
-span[data-link-title^='April '] .rm-page-ref--link,
-span[data-link-title^='May '] .rm-page-ref--link,
-span[data-link-title^='June '] .rm-page-ref--link {
-  color: var(--page-link-date__color_q2);
-}
-
-span[data-link-title^='July '] .rm-page-ref--link,
-span[data-link-title^='August '] .rm-page-ref--link,
-span[data-link-title^='September '] .rm-page-ref--link {
-  color: var(--page-link-date__color_q3);
-}
-
-span[data-link-title^='October '] .rm-page-ref--link,
-span[data-link-title^='November '] .rm-page-ref--link,
-span[data-link-title^='December '] .rm-page-ref--link {
-  color: var(--page-link-date__color_q4);
-}
-
-/* RR change: MINIMIZE QUERIES: add any one of the following tags before the beginning of your query (in the same block):
-
-    #min-title = hides the page reference link / page title
-    #min-con = hides the contextual reference information (breadcrumbs)
-    #minimal = hides both the title and the context
-    #min-q = hides the query string, similar to legacy behavior
-    #min-all = hides everything — title, context, and query string
-    #min-todo = hides everything and makes a compact list
-
-inspired by Matt Goldenberg */
-[data-tag='minimal'] {
-  display: none !important;
-}
-[data-tag='minimal'] + .rm-query .rm-title-arrow-wrapper {
-  display: none !important;
-}
-[data-tag='minimal'] + .rm-query .zoom-mentions-view {
-  display: none !important;
-}
-[data-tag='minimal'] + .rm-query .rm-query-title::after {
-  content: ' #minimal';
-}
-
-[data-tag='min-title'] {
-  display: none !important;
-}
-[data-tag='min-title'] + .rm-query .rm-title-arrow-wrapper {
-  display: none !important;
-}
-[data-tag='min-title'] + .rm-query .rm-query-title::after {
-  content: ' #minimal';
-}
-
-[data-tag='min-con'] {
-  display: none !important;
-}
-[data-tag='min-con'] + .rm-query .zoom-mentions-view {
-  display: none !important;
-}
-[data-tag='min-con'] + .rm-query .rm-query-title::after {
-  content: ' #minimal';
-}
-
-[data-tag='min-q'] {
-  display: none !important;
-}
-[data-tag='min-q'] + .rm-query .rm-query-title {
-  display: none !important;
-}
-
-[data-tag='min-all'] {
-  display: none !important;
-}
-[data-tag='min-all'] + .rm-query .zoom-mentions-view {
-  display: none !important;
-}
-[data-tag='min-all'] + .rm-query .rm-title-arrow-wrapper {
-  display: none !important;
-}
-[data-tag='min-all'] + .rm-query .rm-query-title {
-  display: none !important;
-}
-
-[data-tag='min-todo'] {
-  display: none !important;
-}
-[data-tag='min-todo'] + .rm-query div[style*='margin-left: 12px;'] {
-  margin-left: 0 !important;
-}
-[data-tag='min-todo'] + .rm-query .zoom-mentions-view {
-  display: none !important;
-}
-[data-tag='min-todo'] + .rm-query .rm-title-arrow-wrapper {
-  display: none !important;
-}
-[data-tag='min-todo'] + .rm-query .rm-query-title {
-  display: none !important;
-}
-[data-tag='min-todo'] + .rm-query .rm-reference-item {
-  background: none;
-  margin-left: -12px;
-  margin-top: 3px;
-  padding: 0;
-}
+/* Custom checkboxes */
+/* features */

@@ -48,8 +48,8 @@
   --block-embed__border-left_margin-action: var(--off-blue);
 
   --blockquote__background-color: inherit;
-  --blockquote__border_color: var(--dark-grey);
-  --blockquote__border-left: 5px solid;
+  --blockquote__border_color: var(--mint);
+  --blockquote__border-left: 4px solid;
   --blockquote__color: inherit;
   --blockquote__font-size: 14px;
   --blockquote__text-align: inherit;
@@ -93,10 +93,10 @@
   --inline-block__border: var(--off-blue);
   --inline-search__background-color: var(--blue);
 
-  --kanban-board__background-color: var(--dusty-blue);
+  --kanban-board__background-color: var(--dark-blue);
   --kanban-card__background-color: var(--blue);
   --kanban-card__color: var(--white);
-  --kanban-column__background-color: var(--dusty-blue);
+  --kanban-column__background-color: var(--dark-blue);
   --kanban-column__color: var(--white);
 
   --linked-reference__backgound-color_1: var(--off-blue);
@@ -201,11 +201,11 @@
   /* topbar */
 
   --status-icon__background-color_saving-local: var(--red);
-  --status-icon__background-color_saving-remote: var(--orange)
+  --status-icon__background-color_saving-remote: var(--orange);
   --status-icon__background-color_synched: var(--mint);
-  --search__background: var(--background-highlight);
-  --search__background-color_selected-row: var(--background-highlight-alt);
-  --search__color_body: var(--background-highlight-alt);
+  --search__background: var(--blue);
+  --search__background-color_selected-row: var(--dusty-blue);
+  --search__color_body: var(--off-blue);
   --search__color_new-page: var(--mint);
   --search__color_page: var(--white);
   --search__border: 0 0 0 1px var(--white), 0 0 0 3px rgba(19, 124, 189, 0.3),
@@ -269,7 +269,7 @@
   /* icons */
 
   --icon__background-color_hover: rgba(167, 182, 194, 0.3);
-  --icon__color: var(--white);
+  --icon__color: var(--off-white);
   --icon__color_hover: var(--mint);
   --filter__color_subscript: var(--mint);
 }
