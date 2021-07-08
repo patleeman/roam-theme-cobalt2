@@ -1,3 +1,29 @@
+# This repo forks Roam Mosaic and adds a new theme: Cobalt 2.
+
+This theme is inspired by [Wes Bos' Cobalt2 theme](https://github.com/wesbos?tab=repositories&q=cobalt2&type=&language=&sort=) with tweaks.
+
+Fonts: 
+ - Sans-serif: Montserrat
+ - Monospace: Fira Code
+
+
+To use:
+
+1. Create a new page in Roam:
+1. Add a bullet with `{{roam/css}}`.
+1. Nest a bullet under `{{roam/css}}` and create a code block. Select CSS as the language and add:
+
+```
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://gitcdn.link/repo/patleeman/roam-theme-cobalt2/master/build/css/themes/cobalt2.css');
+```
+
+Note that this theme is unsupported. I won't be taking contributions, but feel free to fork it.
+
+
+---
+
+
 <img src="img/logo_full.png?raw=true" width="400">
 
 ## What is Roam Mosaic?
