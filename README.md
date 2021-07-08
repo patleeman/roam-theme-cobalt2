@@ -20,6 +20,10 @@ To use:
 
 Note that this theme is unsupported. I won't be taking contributions, but feel free to fork it.
 
+## Screenshots
+![](./screenshots/1_cobalt2.png)
+![](./screenshots/2_cobalt2_setup.png)
+
 
 ---
 
